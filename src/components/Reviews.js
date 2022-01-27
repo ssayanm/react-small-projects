@@ -34,8 +34,8 @@ const Review = () => {
     setIndex(checkNumber(randomNumber));
   };
   return (
-    <section className="container">
-      <div className="reviews">
+    <section className="reviews">
+      <div className="container">
         <div className="title">
           <h2>our reviews</h2>
           <div className="underline"></div>

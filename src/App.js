@@ -1,11 +1,11 @@
-import Question from "./components/Question";
+import Questions from "./components/Questions";
 import Reviews from "./components/Reviews";
 
 const App = () => {
   return (
     <>
       <Reviews />
-      <Question />
+      <Questions />
     </>
   );
 };

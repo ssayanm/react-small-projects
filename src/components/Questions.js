@@ -3,13 +3,16 @@ import React, { useState } from "react";
 import accdata from "../data/accdata";
 import SingleQuestion from "./SingleQuestion";
 
-const Question = ({ title, info }) => {
+const Question = () => {
   const [questions, setQuestions] = useState(accdata);
 
   return (
-    <section className="container">
-      <div className=" question">
-        <h3>questions and answers about login</h3>
+    <section className="accordion">
+      <div className="container">
+        <div className="title">
+          <h2>Accordion</h2>
+          <div className="underline"></div>
+        </div>
         <section className="info">
           {questions.map((question) => {
             return (
