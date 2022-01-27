@@ -1,16 +1,12 @@
-import Review from "./Review";
+import Question from "./components/Question";
+import Reviews from "./components/Reviews";
 
 const App = () => {
   return (
-    <main>
-      <section className="container">
-        <div className="title">
-          <h2>our reviews</h2>
-          <div className="underline"></div>
-        </div>
-        <Review />
-      </section>
-    </main>
+    <>
+      <Reviews />
+      <Question />
+    </>
   );
 };
 
