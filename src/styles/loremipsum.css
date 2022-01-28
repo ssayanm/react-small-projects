@@ -1,0 +1,55 @@
+/*
+=============== 
+Lorem Ipsum
+===============
+*/
+
+.lorem {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--clr-grey-9);
+  text-align: center;
+}
+
+.lorem-form {
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  font-size: 1.25rem;
+  color: var(--clr-primary-1);
+}
+input {
+  padding: 0.25rem 0.5rem;
+  width: 4rem;
+  border-radius: var(--radius);
+  border: none;
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+}
+.lbtn {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-10);
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.result {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .lorem {
+    padding: 8rem;
+  }
+}

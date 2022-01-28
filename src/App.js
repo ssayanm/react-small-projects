@@ -1,4 +1,5 @@
 import FoodMenu from "./components/FoodMenu";
+import LoremIpsum from "./components/LoremIpsum";
 import Questions from "./components/Questions";
 import Reviews from "./components/Reviews";
 import Slider from "./components/Slider";
@@ -12,6 +13,7 @@ const App = () => {
       <FoodMenu />
       <Tabs />
       <Slider />
+      <LoremIpsum />
     </>
   );
 };
