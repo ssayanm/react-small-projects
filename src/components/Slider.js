@@ -29,10 +29,9 @@ function Slider() {
 
   return (
     <section className="slider">
-      <div className="stitle">
-        <h2>
-          <span>/</span>reviews
-        </h2>
+      <div className="title">
+        <h2>reviews</h2>
+        <div className="underline"></div>
       </div>
       <div className="ssection-center">
         {people.map((person, personIndex) => {
@@ -50,12 +49,14 @@ function Slider() {
           }
 
           return (
-            <article className={position + " " + "ssection-center"} key={id}>
-              <img src={image} alt={name} className="person-img" />
+            <article className={position + " sarticle"} key={id}>
+              <center>
+                <img src={image} alt={name} className="person-img" />
+              </center>
               <h4>{name}</h4>
               <p className="stitle">{title}</p>
               <p className="stext">{quote}</p>
-              <FaQuoteRight className="icon" />
+              <FaQuoteRight className="sicon" />
             </article>
           );
         })}
