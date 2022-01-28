@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import people from "../data/reviewdata";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import "../styles/reviews.css";
 
 const Review = () => {
   const [index, setIndex] = useState(0);

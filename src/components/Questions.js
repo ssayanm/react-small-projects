@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-
 import accdata from "../data/accdata";
 import SingleQuestion from "./SingleQuestion";
+import "../styles/accordion.css";
 
 const Question = () => {
   const [questions, setQuestions] = useState(accdata);
