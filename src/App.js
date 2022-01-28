@@ -1,6 +1,7 @@
 import FoodMenu from "./components/FoodMenu";
 import Questions from "./components/Questions";
 import Reviews from "./components/Reviews";
+import Tabs from "./components/Tabs";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Reviews />
       <Questions />
       <FoodMenu />
+      <Tabs />
     </>
   );
 };
