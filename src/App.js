@@ -1,3 +1,4 @@
+import ColorG from "./components/ColorG";
 import FoodMenu from "./components/FoodMenu";
 import LoremIpsum from "./components/LoremIpsum";
 import Questions from "./components/Questions";
@@ -14,6 +15,7 @@ const App = () => {
       <Tabs />
       <Slider />
       <LoremIpsum />
+      <ColorG />
     </>
   );
 };
