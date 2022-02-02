@@ -8,6 +8,7 @@ Color Generator
   min-height: 100vh;
   padding: 8rem 0;
   text-align: center;
+  background-color: var(--clr-grey-9);
 }
 
 .colorg input {

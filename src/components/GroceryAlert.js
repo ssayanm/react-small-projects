@@ -7,6 +7,7 @@ const GroceryAlert = ({ type, msg, removeAlert, list }) => {
     }, 3000);
     return () => clearTimeout(timeout);
   }, [list, removeAlert]);
+
   return <p className={`galert galert-${type}`}>{msg}</p>;
 };
 

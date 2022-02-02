@@ -16,8 +16,9 @@ const App = () => {
       <Tabs />
       <Slider />
       <LoremIpsum />
-      <ColorG />
+
       <Grocery />
+      <ColorG />
     </>
   );
 };

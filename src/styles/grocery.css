@@ -3,13 +3,19 @@
 Grocery List
 ===============
 */
+
+.grocery-list {
+  min-height: 100vh;
+  padding: 8rem 0;
+}
 .gsection-center {
   background: var(--clr-white);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
-  min-height: 100vh;
-  padding: 8rem 0;
+  margin: 0 auto;
+  max-width: 35rem;
+  padding: 2rem;
 }
 .gsection-center:hover {
   box-shadow: var(--dark-shadow);

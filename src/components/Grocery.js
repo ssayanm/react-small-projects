@@ -18,6 +18,7 @@ const Grocery = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editID, setEditID] = useState(null);
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name) {
@@ -47,10 +48,12 @@ const Grocery = () => {
   const showAlert = (show = false, type = "", msg = "") => {
     setAlert({ show, type, msg });
   };
+
   const clearList = () => {
     showAlert(true, "danger", "empty list");
     setList([]);
   };
+
   const removeItem = (id) => {
     showAlert(true, "danger", "item removed");
     setList(list.filter((item) => item.id !== id));
@@ -68,39 +71,45 @@ const Grocery = () => {
   }, [list]);
 
   return (
-    <section className="gsection-center">
+    <section className="grocery-list">
       <div className="container">
-        <form className="grocery-form" onSubmit={handleSubmit}>
-          {alert.show && (
-            <GroceryAlert {...alert} removeAlert={showAlert} list={list} />
-          )}
+        <div className="title">
+          <h2>grocery bud</h2>
+          <div className="underline"></div>
+        </div>
+        <div className="gsection-center">
+          <form className="grocery-form" onSubmit={handleSubmit}>
+            {alert.show && (
+              <GroceryAlert {...alert} removeAlert={showAlert} list={list} />
+            )}
 
-          <h3>grocery bud</h3>
-          <div className="gform-control">
-            <input
-              type="text"
-              className="grocery"
-              placeholder="e.g. eggs"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <button type="submit" className="gsubmit-btn">
-              {isEditing ? "edit" : "submit"}
-            </button>
-          </div>
-        </form>
-        {list.length > 0 && (
-          <div className="grocery-container">
-            <GroceryList
-              items={list}
-              removeItem={removeItem}
-              editItem={editItem}
-            />
-            <button className="gclear-btn" onClick={clearList}>
-              clear items
-            </button>
-          </div>
-        )}
+            <div className="gform-control">
+              <input
+                type="text"
+                className="grocery"
+                placeholder="e.g. eggs"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <button type="submit" className="gsubmit-btn">
+                {isEditing ? "edit" : "submit"}
+              </button>
+            </div>
+          </form>
+
+          {list.length > 0 && (
+            <div className="grocery-container">
+              <GroceryList
+                items={list}
+                removeItem={removeItem}
+                editItem={editItem}
+              />
+              <button className="gclear-btn" onClick={clearList}>
+                clear items
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
