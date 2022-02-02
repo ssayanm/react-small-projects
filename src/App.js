@@ -1,5 +1,6 @@
 import ColorG from "./components/ColorG";
 import FoodMenu from "./components/FoodMenu";
+import Grocery from "./components/Grocery";
 import LoremIpsum from "./components/LoremIpsum";
 import Questions from "./components/Questions";
 import Reviews from "./components/Reviews";
@@ -16,6 +17,7 @@ const App = () => {
       <Slider />
       <LoremIpsum />
       <ColorG />
+      <Grocery />
     </>
   );
 };
