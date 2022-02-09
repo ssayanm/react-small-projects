@@ -28,7 +28,7 @@ function Slider() {
   }, [index]);
 
   return (
-    <section className="slider">
+    <section className="slider" id="slider">
       <div className="title">
         <h2>reviews</h2>
         <div className="underline"></div>

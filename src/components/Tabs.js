@@ -27,7 +27,7 @@ function Tabs() {
   }
   const { company, dates, duties, title } = jobs[value];
   return (
-    <section className="tabs">
+    <section className="tabs" id="tabs">
       <div className="title">
         <h2>experience</h2>
         <div className="underline"></div>

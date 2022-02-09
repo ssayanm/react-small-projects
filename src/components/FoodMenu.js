@@ -20,7 +20,7 @@ function FoodMenu() {
   };
 
   return (
-    <section className="menu ">
+    <section className="menu" id="foodmenu">
       <div className="title">
         <h2>our menu</h2>
         <div className="underline"></div>

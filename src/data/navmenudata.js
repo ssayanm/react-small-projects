@@ -8,23 +8,33 @@ export const links = [
   },
   {
     id: 2,
-    url: "/about",
-    text: "about",
+    url: "/#reviews",
+    text: "reviews",
   },
   {
     id: 3,
-    url: "/projects",
-    text: "projects",
+    url: "/#accordion",
+    text: "Accordion",
   },
   {
     id: 4,
-    url: "/contact",
-    text: "contact",
+    url: "/#foodmenu",
+    text: "FoodMenu",
   },
   {
     id: 5,
-    url: "/profile",
-    text: "profile",
+    url: "/#tabs",
+    text: "Tabs",
+  },
+  {
+    id: 6,
+    url: "/#slider",
+    text: "Slider",
+  },
+  {
+    id: 7,
+    url: "/sidebar",
+    text: "Sidebar",
   },
 ];
 

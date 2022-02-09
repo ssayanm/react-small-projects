@@ -7,7 +7,7 @@ const Question = () => {
   const [questions, setQuestions] = useState(accdata);
 
   return (
-    <section className="accordion">
+    <section className="accordion" id="accordion">
       <div className="container">
         <div className="title">
           <h2>Accordion</h2>
