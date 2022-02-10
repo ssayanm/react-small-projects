@@ -1,8 +1,6 @@
 import React from "react";
-import ColorG from "../components/ColorG";
 import FoodMenu from "../components/FoodMenu";
 import Grocery from "../components/Grocery";
-import LoremIpsum from "../components/LoremIpsum";
 import Navbar from "../components/Navbar";
 import Questions from "../components/Questions";
 import Reviews from "../components/Reviews";
@@ -18,9 +16,8 @@ const Home = () => {
       <FoodMenu />
       <Tabs />
       <Slider />
-      <LoremIpsum />
+
       <Grocery />
-      <ColorG />
     </>
   );
 };

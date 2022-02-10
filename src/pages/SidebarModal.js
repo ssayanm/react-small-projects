@@ -1,6 +1,6 @@
-import Modal from "./Modal";
-import Sidebar from "./Sidebar";
-import Home from "./SidebarHome";
+import Modal from "../components/Modal";
+import Sidebar from "../components/Sidebar";
+import Home from "../components/SidebarHome";
 import "../styles/sidebarModal.css";
 
 const SidebarModal = () => {

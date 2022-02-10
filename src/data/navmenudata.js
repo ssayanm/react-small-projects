@@ -16,12 +16,7 @@ export const links = [
     text: "home",
     icon: <FaHome />,
   },
-  {
-    id: 2,
-    url: "/#reviews",
-    text: "reviews",
-    icon: <FaUserFriends />,
-  },
+
   {
     id: 3,
     url: "/#accordion",
@@ -42,8 +37,8 @@ export const links = [
   },
   {
     id: 6,
-    url: "/#slider",
-    text: "Slider",
+    url: "/grocery",
+    text: "Grocery",
     icon: <FaHome />,
   },
   {
@@ -51,6 +46,12 @@ export const links = [
     url: "/sidebar",
     text: "Sidebar",
     icon: <FaWpforms />,
+  },
+  {
+    id: 6,
+    url: "/color",
+    text: "Color",
+    icon: <FaHome />,
   },
 ];
 

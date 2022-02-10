@@ -7,7 +7,7 @@ Lorem Ipsum
 .lorem {
   min-height: 100vh;
   padding: 2rem;
-  background-color: var(--clr-grey-9);
+  /* background-color: var(--clr-grey-9); */
   text-align: center;
 }
 
