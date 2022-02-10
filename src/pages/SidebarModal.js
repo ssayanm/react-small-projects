@@ -1,12 +1,14 @@
 import Modal from "../components/Modal";
 import Sidebar from "../components/Sidebar";
-import Home from "../components/SidebarHome";
+import SidebarHome from "../components/SidebarHome";
 import "../styles/sidebarModal.css";
+import Navbar from "../components/Navbar";
 
 const SidebarModal = () => {
   return (
     <>
-      <Home />
+      <Navbar />
+      <SidebarHome />
       <Sidebar />
       <Modal />
     </>
