@@ -1,10 +1,9 @@
-import React from "react";
 import phoneImg from "../phone.svg";
-
 import { useGlobalContext } from "../context";
 
 const StripeHero = () => {
   const { closeSubmenu } = useGlobalContext();
+
   return (
     <section className="stripehero" onMouseOver={closeSubmenu}>
       <div className="stripehero-center">

@@ -97,7 +97,7 @@ Stripe Styles
     display: block;
     justify-self: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     height: 100%;
     display: grid;

@@ -5,6 +5,7 @@ import { useGlobalContext } from "../context";
 
 const StripeNavbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
+
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
@@ -12,16 +13,20 @@ const StripeNavbar = () => {
     const bottom = tempBtn.bottom - 3;
     openSubmenu(page, { center, bottom });
   };
+
   const handleSubmenu = (e) => {
-    if (!e.target.classList.contains("link-btn")) {
+    if (!e.target.classList.contains("stripelink-btn")) {
       closeSubmenu();
     }
   };
+
   return (
     <nav className="stripenav" onMouseOver={handleSubmenu}>
       <div className="stripenav-center">
         <div className="stripenav-header">
-          <img src={logo} className="stripenav-logo" alt="" />
+          <a href="/">
+            <img src={logo} className="stripenav-logo" alt="" />
+          </a>
           <button className="stripebtn stripetoggle-btn" onClick={openSidebar}>
             <FaBars />
           </button>
@@ -40,6 +45,11 @@ const StripeNavbar = () => {
           <li>
             <button className="stripelink-btn" onMouseOver={displaySubmenu}>
               company
+            </button>
+          </li>
+          <li>
+            <button className="stripelink-btn" onMouseOver={displaySubmenu}>
+              flowers
             </button>
           </li>
         </ul>

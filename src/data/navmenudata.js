@@ -18,7 +18,7 @@ export const links = [
   },
 
   {
-    id: 3,
+    id: 2,
     url: "/#accordion",
     text: "Accordion",
     icon: <FaFolderOpen />,
@@ -31,21 +31,27 @@ export const links = [
   },
 
   {
-    id: 6,
+    id: 5,
     url: "/grocery",
     text: "Grocery",
     icon: <FaHome />,
   },
   {
-    id: 7,
+    id: 6,
     url: "/sidebar",
     text: "Sidebar",
     icon: <FaWpforms />,
   },
   {
-    id: 6,
+    id: 7,
     url: "/color",
     text: "Color",
+    icon: <FaHome />,
+  },
+  {
+    id: 8,
+    url: "/stripe",
+    text: "Stripe",
     icon: <FaHome />,
   },
 ];
