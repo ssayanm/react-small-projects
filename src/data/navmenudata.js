@@ -29,12 +29,7 @@ export const links = [
     text: "FoodMenu",
     icon: <FaUserFriends />,
   },
-  {
-    id: 5,
-    url: "/#tabs",
-    text: "Tabs",
-    icon: <FaHome />,
-  },
+
   {
     id: 6,
     url: "/grocery",
