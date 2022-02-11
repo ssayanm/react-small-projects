@@ -3,6 +3,7 @@ import { useGlobalContext } from "../context";
 
 const CartNav = () => {
   const { amount } = useGlobalContext();
+
   return (
     <div className="cartnav">
       <div className="cartnav-center">
