@@ -1,5 +1,6 @@
 import {
   FaBehance,
+  FaCartPlus,
   FaFacebook,
   FaFolderOpen,
   FaHome,
@@ -53,6 +54,12 @@ export const links = [
     url: "/stripe",
     text: "Stripe",
     icon: <FaHome />,
+  },
+  {
+    id: 9,
+    url: "/cart",
+    text: "Cart",
+    icon: <FaCartPlus />,
   },
 ];
 

@@ -3,8 +3,8 @@ import Home from "./pages/Home";
 import SidebarModal from "./pages/SidebarModal.js";
 import Color from "./pages/Color.js";
 import GroceryBud from "./pages/GroceryBud.js";
-
 import Stripe from "./pages/Stripe";
+import Cart from "./pages/Cart";
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
         <Route exact path="color" element={<Color />} />
         <Route exact path="grocery" element={<GroceryBud />} />
         <Route exact path="stripe" element={<Stripe />} />
+        <Route exact path="cart" element={<Cart />} />
       </Routes>
     </Router>
   );
