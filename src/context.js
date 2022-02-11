@@ -1,7 +1,7 @@
 import React, { useState, useContext, useReducer, useEffect } from "react";
 import sublinks from "./data/stripedata";
 import reducer from "./reducer";
-import cartItems from "./data/cartdata";
+// import cartItems from "./data/cartdata";
 
 const url = "https://course-api.com/react-useReducer-cart-project";
 
@@ -9,7 +9,8 @@ const AppContext = React.createContext();
 
 const initialState = {
   loading: false,
-  cart: cartItems,
+  // cart: [cartItems],
+  cart: [],
   total: 0,
   amount: 0,
 };
