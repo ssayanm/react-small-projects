@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import SidebarModal from "./pages/SidebarModal.js";
 import Color from "./pages/Color.js";
@@ -8,16 +8,16 @@ import Cart from "./pages/Cart";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/sidebar" element={<SidebarModal />} />
-        <Route path="/color" element={<Color />} />
-        <Route path="/grocery" element={<GroceryBud />} />
-        <Route path="/stripe" element={<Stripe />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/" element={<Home />} />
+        <Route path="sidebar" element={<SidebarModal />} />
+        <Route path="color" element={<Color />} />
+        <Route path="grocery" element={<GroceryBud />} />
+        <Route path="stripe" element={<Stripe />} />
+        <Route path="cart" element={<Cart />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
