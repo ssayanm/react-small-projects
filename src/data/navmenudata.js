@@ -2,11 +2,9 @@ import {
   FaBehance,
   FaCartPlus,
   FaFacebook,
-  FaFolderOpen,
   FaHome,
   FaLinkedin,
   FaTwitter,
-  FaUserFriends,
   FaWpforms,
 } from "react-icons/fa";
 
@@ -16,19 +14,6 @@ export const links = [
     url: "/",
     text: "home",
     icon: <FaHome />,
-  },
-
-  {
-    id: 2,
-    url: "/#accordion",
-    text: "Accordion",
-    icon: <FaFolderOpen />,
-  },
-  {
-    id: 4,
-    url: "/#foodmenu",
-    text: "FoodMenu",
-    icon: <FaUserFriends />,
   },
 
   {

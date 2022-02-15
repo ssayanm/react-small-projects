@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../logostripe.svg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 
 const StripeNavbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
@@ -24,9 +25,9 @@ const StripeNavbar = () => {
     <nav className="stripenav" onMouseOver={handleSubmenu}>
       <div className="stripenav-center">
         <div className="stripenav-header">
-          <a href="/">
+          <Link to="/">
             <img src={logo} className="stripenav-logo" alt="" />
-          </a>
+          </Link>
           <button className="stripebtn stripetoggle-btn" onClick={openSidebar}>
             <FaBars />
           </button>
