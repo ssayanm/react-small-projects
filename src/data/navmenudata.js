@@ -46,6 +46,12 @@ export const links = [
     text: "Cart",
     icon: <FaCartPlus />,
   },
+  {
+    id: 10,
+    url: "/hackernews",
+    text: "News",
+    icon: <FaHome />,
+  },
 ];
 
 export const social = [

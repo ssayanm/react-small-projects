@@ -1,18 +1,42 @@
-import React, { useState, useContext, useReducer, useEffect } from "react";
+import React, {
+  useState,
+  useContext,
+  useReducer,
+  useEffect,
+  createContext,
+} from "react";
 import sublinks from "./data/stripedata";
 import reducer from "./reducer";
-// import cartItems from "./data/cartdata";
+
+import {
+  SET_LOADING,
+  SET_STORIES,
+  REMOVE_STORY,
+  HANDLE_PAGE,
+  HANDLE_SEARCH,
+  CLEAR_CART,
+  TOGGLE_AMOUNT,
+  DISPLAY_ITEMS,
+  LOADING,
+  GET_TOTALS,
+  REMOVE,
+} from "./actions";
 
 const url = "https://course-api.com/react-useReducer-cart-project";
+const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?";
 
-const AppContext = React.createContext();
+const AppContext = createContext();
 
 const initialState = {
   loading: false,
-  // cart: [cartItems],
   cart: [],
   total: 0,
   amount: 0,
+  isLoading: true,
+  hits: [],
+  query: "react",
+  page: 0,
+  nbPages: 0,
 };
 
 const AppProvider = ({ children }) => {
@@ -29,38 +53,56 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const clearCart = () => {
-    dispatch({ type: "CLEAR_CART" });
+    dispatch({ type: CLEAR_CART });
   };
 
   const remove = (id) => {
-    dispatch({ type: "REMOVE", payload: id });
+    dispatch({ type: REMOVE, payload: id });
   };
 
-  // const increase = (id) => {
-  //   dispatch({ type: "INCREASE", payload: id });
-  // };
-
-  // const decrease = (id) => {
-  //   dispatch({ type: "DECREASE", payload: id });
-  // };
-
   const fetchData = async () => {
-    dispatch({ type: "LOADING" });
+    dispatch({ type: LOADING });
     const response = await fetch(url);
     const cart = await response.json();
-    dispatch({ type: "DISPLAY_ITEMS", payload: cart });
+    dispatch({ type: DISPLAY_ITEMS, payload: cart });
   };
 
   const toggleAmount = (id, type) => {
-    dispatch({ type: "TOGGLE_AMOUNT", payload: { id, type } });
+    dispatch({ type: TOGGLE_AMOUNT, payload: { id, type } });
+  };
+
+  // hacker news
+  const fetchStories = async (url) => {
+    dispatch({ type: SET_LOADING });
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      dispatch({
+        type: SET_STORIES,
+        payload: { hits: data.hits, nbPages: data.nbPages },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const removeStory = (id) => {
+    dispatch({ type: REMOVE_STORY, payload: id });
+  };
+  const handleSearch = (query) => {
+    dispatch({ type: HANDLE_SEARCH, payload: query });
+  };
+  const handlePage = (value) => {
+    dispatch({ type: HANDLE_PAGE, payload: value });
   };
 
   useEffect(() => {
     fetchData();
-  }, []);
+    fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`);
+  }, [state.query, state.page]);
 
   useEffect(() => {
-    dispatch({ type: "GET_TOTALS" });
+    dispatch({ type: GET_TOTALS });
   }, [state.cart]);
 
   //sidebar and modal
@@ -115,9 +157,10 @@ const AppProvider = ({ children }) => {
         ...state,
         clearCart,
         remove,
-        // increase,
-        // decrease,
         toggleAmount,
+        removeStory,
+        handleSearch,
+        handlePage,
       }}
     >
       {children}

@@ -5,6 +5,7 @@ import Color from "./pages/Color.js";
 import GroceryBud from "./pages/GroceryBud.js";
 import Stripe from "./pages/Stripe";
 import Cart from "./pages/Cart";
+import HackerNews from "./pages/HackerNews";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="grocery" element={<GroceryBud />} />
         <Route path="stripe" element={<Stripe />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="hackernews" element={<HackerNews />} />
       </Routes>
     </BrowserRouter>
   );

@@ -11,7 +11,7 @@ const Pagination = () => {
   useEffect(() => {
     if (loading) return;
     setFollowers(data[page]);
-  }, [loading, page]);
+  }, [loading, page, data]);
 
   const nextPage = () => {
     setPage((oldPage) => {
