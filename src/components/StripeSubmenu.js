@@ -11,8 +11,6 @@ const StripeSubmenu = () => {
   const container = useRef(null);
   const [columns, setColumns] = useState("col-2");
 
-  console.log(location);
-
   useEffect(() => {
     setColumns("col-2");
 
@@ -21,7 +19,7 @@ const StripeSubmenu = () => {
 
     submenu.style.left = `${center}px`;
     submenu.style.top = `${bottom}px`;
-    console.log(links);
+
     if (links.length === 3) {
       setColumns("col-3");
     }
