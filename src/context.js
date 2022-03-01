@@ -140,6 +140,7 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
+        ...state,
         isSidebarOpen,
         isModalOpen,
         openModal,
@@ -154,7 +155,6 @@ const AppProvider = ({ children }) => {
         closeSubmenu,
         page,
         location,
-        ...state,
         clearCart,
         remove,
         toggleAmount,

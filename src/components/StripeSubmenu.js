@@ -11,6 +11,8 @@ const StripeSubmenu = () => {
   const container = useRef(null);
   const [columns, setColumns] = useState("col-2");
 
+  console.log(location);
+
   useEffect(() => {
     setColumns("col-2");
 
